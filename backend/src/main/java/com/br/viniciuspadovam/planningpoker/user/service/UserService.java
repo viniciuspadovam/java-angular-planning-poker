@@ -40,4 +40,8 @@ public class UserService {
 		this.repository.remove(username);
 	}
 	
+	public void vote(String userId, int voteValue) {
+		this.repository.vote(userId, voteValue);
+	}
+	
 }

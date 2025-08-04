@@ -50,7 +50,7 @@ public class WebSocketEventListener {
             
             this.userService.remove(username);
             
-            this.messagingTemplate.convertAndSend("/topic/allUsers", this.userService.getAllUsernames());
+            this.messagingTemplate.convertAndSend("/topic/allUsers", this.userService.getAllUsers());
         }
     }
 
