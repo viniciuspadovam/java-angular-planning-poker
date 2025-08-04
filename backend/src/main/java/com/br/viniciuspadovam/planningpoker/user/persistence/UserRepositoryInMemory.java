@@ -12,7 +12,7 @@ import com.br.viniciuspadovam.planningpoker.user.entity.User;
 import com.br.viniciuspadovam.planningpoker.user.interfaces.UserRepository;
 
 @Component
-public class ConnectedUserRegistry implements UserRepository {
+public class UserRepositoryInMemory implements UserRepository {
 	
 	private final Set<User> users = ConcurrentHashMap.newKeySet();
 	
@@ -35,6 +35,5 @@ public class ConnectedUserRegistry implements UserRepository {
 		
 		this.users.remove(existingUser.get());
 	}
-	
 
 }

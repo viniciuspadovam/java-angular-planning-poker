@@ -30,9 +30,9 @@ public class WebSocketEventListener {
         StompHeaderAccessor accessor = StompHeaderAccessor.wrap(event.getMessage());
         
 		String username = accessor.getFirstNativeHeader("username");
-		log.info("User connected: " + username);
 			
 		if(username != null) {
+			log.info("User connected: " + username);
 			accessor.getSessionAttributes().put("username", username);
 			this.userService.add(username);
 		}
@@ -50,7 +50,7 @@ public class WebSocketEventListener {
             
             this.userService.remove(username);
             
-            this.messagingTemplate.convertAndSend("/topic/allUsers", this.userService.getAllUsers());
+            this.messagingTemplate.convertAndSend("/topic/allUsers", this.userService.getAllUsernames());
         }
     }
 
