@@ -5,15 +5,16 @@
                 <label for="roomName">Nome da Sala:</label>
                 <input type="text" placeholder="Digite o nome da Sala" ngModel name="roomName" required>
             </div>
+            
+            <div>
+                <label for="estimateValue">Tipo de Estimativa:</label>
+                <input type="radio" id="fibonacci" name="estimateValue" ngModel value="FIBONACCI"> <label for="fibonacci">Fibonacci</label>
+                <input type="radio" id="days" name="estimateValue" ngModel value="DAYS"> <label for="days">Dias</label>
+            </div>
         }
         <div>
-            <label for="estimateValue">Tipo de Estimativa:</label>
-            <input type="radio" id="fibonacci" name="estimateValue" ngModel value="FIBONACCI"> <label for="fibonacci">Fibonacci</label>
-            <input type="radio" id="days" name="estimateValue" ngModel value="DAYS"> <label for="days">Dias</label>
-        </div>
-        <div>
-            <label for="userName">Seu Nome:</label>
-            <input type="text" placeholder="Digite seu nome" ngModel name="userName" required>
+            <label for="username">Seu Nome:</label>
+            <input type="text" placeholder="Digite seu nome" ngModel name="username" required>
         </div>
         <button type="submit">Entrar</button>
     </form>
