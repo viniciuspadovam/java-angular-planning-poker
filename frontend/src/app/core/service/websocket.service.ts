@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Client, Message } from '@stomp/stompjs';
 import SockJS from 'sockjs-client';
 
@@ -14,9 +15,13 @@ export class WebsocketService {
     return this._users;
   }
 
+  get isConnected(): boolean {
+    return this.client.connected || false;
+  }
+
   connect(username: string) {
     this.client = new Client({
-      brokerURL: undefined, // usamos SockJS
+      brokerURL: undefined,
       webSocketFactory: () => new SockJS('http://localhost:8080/ws'),
       reconnectDelay: 5000,
       connectHeaders: {

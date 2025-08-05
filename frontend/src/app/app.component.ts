@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
+import { WebsocketService } from './core/service/websocket.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,15 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'frontend';
+  
+  constructor(
+    private websocketService: WebsocketService,
+    private router: Router
+  ) {}
+
+  ngOnInit() {
+    if(!this.websocketService.isConnected)
+      this.router.navigate(['/']);
+  }
+  
 }

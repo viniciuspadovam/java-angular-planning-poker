@@ -15,6 +15,8 @@ export class JoinComponent {
 
   private _hasRoom: boolean = false;
 
+  public estimateValue = 'FIBONACCI';
+
   constructor(
     private websocketService: WebsocketService,
     private roomService: RoomService,
