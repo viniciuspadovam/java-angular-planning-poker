@@ -1,0 +1,17 @@
+.loading-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+::ng-deep .custom-spinner circle {
+  stroke: var(--gold-500) !important;
+}
+
+p {
+  color: var(--text-on-accent);
+  font-size: 1.2rem;
+}

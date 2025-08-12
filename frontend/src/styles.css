@@ -1,3 +1,5 @@
+@import '@angular/material/prebuilt-themes/azure-blue.css';
+
 * {
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -5,6 +7,36 @@
     box-sizing: border-box;
 }
 
-body {
-    background: #e0e0e0;
+:root {
+    --blue-50:  #DFE3F0;
+    --blue-100: #BDC5E1;
+    --blue-200: #9AA7D2;
+    --blue-300: #7789C4;
+    --blue-400: #536BB6;
+    --blue-500: #465892;
+    --blue-600: #334274;
+    --blue-700: #252F51;
+    --blue-800: #161B2F;
+    --blue-900: #06080D;
+
+    --gold-50:  #FFFBEF;
+    --gold-100: #FFEFBD;
+    --gold-200: #FFE28C;
+    --gold-300: #FFD65B;
+    --gold-400: #FFCA29;
+    --gold-500: #F2B705;
+    --gold-600: #C69400;
+    --gold-700: #946F00;
+    --gold-800: #634A00;
+    --gold-900: #312500;
+
+    --text-on-primary: #FFFFFF;
+    --text-on-accent: #102020;
 }
+
+body {
+    background: var(--blue-50);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
